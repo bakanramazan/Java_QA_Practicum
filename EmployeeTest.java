@@ -1,6 +1,19 @@
-package bakan.com;
+package com.ramazanbakan;
 
+/**
+ * Employee Test
+ *
+ *
+ *
+ */
 public class EmployeeTest {
+    /**
+     * main
+     *
+     *
+     *
+     * @param args ?
+     */
     public static void main(String[] args) {
         String name="Ramazan Kartal";
         double salary=1500;

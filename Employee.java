@@ -1,13 +1,26 @@
-package bakan.com;
+package com.ramazanbakan;
 
 import java.util.Arrays;
 
+/**
+ * Employee
+ *
+ *
+ */
 public class Employee {
     private final String name;
     private final double salary;
     private final double[] workHours;
     private final int hireYear;
 
+    /**
+     * Employee(name, salary, workHours[], hireYear)
+     *
+     * @param name ?
+     * @param salary ?
+     * @param workHours ?
+     * @param hireYear ?
+     */
     public Employee(String name, double salary, double[] workHours, int hireYear) {
         this.name = name;
         this.salary = salary;
@@ -15,10 +28,20 @@ public class Employee {
         this.hireYear = hireYear;
     }
 
+    /**
+     *
+     *
+     * @return
+     */
     public double tax() {
         return salary <= 1000 ? 0 : (salary + bonus()) * 0.03;
     }
 
+    /**
+     *
+     *
+     * @return
+     */
     public double bonus() {
         double totalBonusValue = 0;
         for (int i = 0; i < workHours.length; i++) {
@@ -29,6 +52,11 @@ public class Employee {
         return totalBonusValue;
     }
 
+    /**
+     *
+     *
+     * @return
+     */
     public double raiseSalary() {
         int currentYear = 2021;
         int totalWorkYear = currentYear - hireYear;
@@ -43,16 +71,9 @@ public class Employee {
 
 
     /***
-     * console output:
-     * Name,
-     * Salary,
-     * workHours,
-     * hireYear,
-     * tax,
-     * bonus,
-     * raiseSalary,
-     * grossSalary,
-     * netSalary
+     * bu sınıfın özelliklerini döndüren method.
+     *
+     * name, salary, work hours, hire year, tax, bonus, raise salary, gross salary, net salary
      */
     @Override
     public String toString() {
