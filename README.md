@@ -1,4 +1,4 @@
-\# Project Task
+# Project Task
 
 
 
@@ -6,7 +6,7 @@ Course Name: ebebek Java&QA Practicum Type: First Case Language : Java Case Deta
 
 
 
-\## Sınıfın Nitelikleri
+## Sınıfın Nitelikleri
 
 
 
