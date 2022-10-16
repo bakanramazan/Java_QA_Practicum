@@ -3,16 +3,14 @@ package com.ramazanbakan;
 /**
  * Employee Test
  *
- *
- *
+ * This class is used to test the Employee class and show the results.
+ * 
  */
 public class EmployeeTest {
     /**
-     * main
-     *
-     *
-     *
-     * @param args ?
+     * The main method is used to fill and run the employee fields.
+     * 
+     * @param args
      */
     public static void main(String[] args) {
         String name="Ramazan Kartal";

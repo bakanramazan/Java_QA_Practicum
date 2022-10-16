@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * Employee
  *
+ * It is a class that performs tax and salary calculations of an employee and displays its information.
  *
  */
 public class Employee {
@@ -16,10 +17,10 @@ public class Employee {
     /**
      * Employee(name, salary, workHours[], hireYear)
      *
-     * @param name ?
-     * @param salary ?
-     * @param workHours ?
-     * @param hireYear ?
+     * @param name: employee's name
+     * @param salary: employee's salary
+     * @param workHours: employee's weekly working hours
+     * @param hireYear: start date of work
      */
     public Employee(String name, double salary, double[] workHours, int hireYear) {
         this.name = name;
@@ -30,15 +31,17 @@ public class Employee {
 
     /**
      *
+     * Method of calculating tax amount by salary
      *
      * @return
      */
     public double tax() {
-        return salary <= 1000 ? 0 : (salary + bonus()) * 0.03;
+        return salary <= 1000 ? 0 : salary * 0.03;
     }
 
     /**
      *
+     * The method that calculates the bonus of working over 40 hours per week.
      *
      * @return
      */
@@ -52,8 +55,8 @@ public class Employee {
         return totalBonusValue;
     }
 
-    /**
-     *
+    /****
+     * It is a method that calculates the salary increase of the employee with bonus and taxes.
      *
      * @return
      */
@@ -71,7 +74,8 @@ public class Employee {
 
 
     /***
-     * bu sınıfın özelliklerini döndüren method.
+     *
+     * Method that returns the attributes of this class.
      *
      * name, salary, work hours, hire year, tax, bonus, raise salary, gross salary, net salary
      */
@@ -84,7 +88,7 @@ public class Employee {
                 "Tax : " + this.tax() + "\n" +
                 "Bonus : " + this.bonus() + "\n" +
                 "Raise Salary : " + this.raiseSalary() + "\n" +
-                "Gross Salary : " + (this.salary + this.bonus()) + "\n" +
-                "Net Salary : " + (this.salary + this.bonus() - this.tax()) + "\n";
+                "Gross Salary : " + (this.salary + this.bonus()-this.tax()) + "\n" +
+                "Net Salary : " + (this.salary + this.bonus()) + "\n";
     }
 }
